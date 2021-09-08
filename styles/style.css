@@ -97,11 +97,10 @@ div.double-input textarea {
 
     nav.navbar ul li a {
         padding: 15px;
-        width: 60px;
+        width: 70px;
     }
 
     nav.navbar ul li a:hover {
-        background-color: transparent;
         transform: rotate(-360deg);
     }
 
