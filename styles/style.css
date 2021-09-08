@@ -1,0 +1,120 @@
+* {
+    margin:0;
+    padding:0;
+}
+
+body {
+    margin: auto;
+}
+
+nav.navbar {
+    display: flex;
+    justify-content: space-between;
+    background-color: aquamarine;
+    padding: 15px;
+}
+
+nav.navbar p{
+    display:flex;
+    padding: 10px;
+}
+
+nav.navbar p:hover {
+    width: 50px;
+    transform: rotate(360deg);
+    transition: 0.9s;
+}
+
+nav.navbar ul {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+}
+
+nav.navbar ul li a {
+    display: flex;
+    color: white;
+    padding: 10px;
+    text-decoration: none;
+}
+
+nav.navbar ul li a:hover {
+    text-decoration: underline red;
+    transform: rotate(25deg);
+    transition: 0.4s;
+    background-color:blue;
+}
+
+form {
+    position: absolute;
+    margin: -25em 0 0 0;
+}
+
+div.double-input {
+    margin: 150px auto;
+    padding: 15px;
+    width: 320px;
+    height: 245px;
+    text-align: center;
+    background-color:aliceblue;
+}
+
+div.double-input textarea {
+    font-size: 16px;
+}
+
+#send,
+#stop {
+    margin: 15px 23px 15px 0;
+    padding: 14px 30px;
+    border: 0;
+}
+#send {
+    background-color: green;
+}
+
+#stop {
+    background-color: red;
+}
+
+#send:hover,
+#stop:hover {
+    background-color: orange;
+    border: 0;
+}
+
+@media only screen and (max-width: 768px) {
+
+    nav.navbar {
+        display: block;
+        padding:0;
+    }
+
+    nav.navbar ul {
+        display: block;
+        padding: 15px;
+    }
+
+    nav.navbar ul li a {
+        padding: 15px;
+        width: 60px;
+    }
+
+    nav.navbar ul li a:hover {
+        transform: rotate(-360deg);
+    }
+
+    div.double-input textarea {
+        font-size: 16px;
+        width: 220px;
+    }
+
+    div.double-input {
+        width: 240px;
+    }
+
+    #send,
+    #stop {
+        padding: 5px;
+    }
+}
