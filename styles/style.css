@@ -101,6 +101,7 @@ div.double-input textarea {
     }
 
     nav.navbar ul li a:hover {
+        background-color: transparent;
         transform: rotate(-360deg);
     }
 
