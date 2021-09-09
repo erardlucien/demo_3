@@ -9,24 +9,38 @@
     <body>
         <header>
             <nav class="navbar">
-                <p><i>My</i><b>Logo</b></p>
-                <ul>
-                    <li><a href="#">Homepage</a></li>
-                    <li><a href="#">Service</a></li>
-                    <li><a href="#">Über uns</a></li>
-                    <li><a href="#">Kontakt</a></li>
-                </ul>
+                <p class="logo"><i>Mein</i>&nbsp;<b>Logo</b></p>
+                <div class="menu">
+                    <input class="close-input" id="close-input" name="close-input" type="checkbox">
+                    <div class="label-close-container">
+                        <label class="label-close-input first" for="close-input"></label>
+                        <label class="label-close-input second" for="close-input"></label>
+                        <label class="label-close-input third" for="close-input"></label> 
+                    </div>
+                    <ul class="navbar-links">
+                        <li class="navbar-links-item"><a class="navbar-link" href="#">Homepage</a></li>
+                        <li class="navbar-links-item"><a class="navbar-link" href="#">Services</a></li>
+                        <li class="navbar-links-item"><a class="navbar-link" href="#">Über uns</a></li>
+                        <li class="navbar-links-item"><a class="navbar-link" href="#">Kontakt</a></li>
+                    </ul>
+                </div>
             </nav>
         </header>
-        <form label="formular_1" id="formular_1">
-        </form>
-        <div class="double-input">
-            <label for="text"></label>
-            <textarea name="text" id="text" cols="30" rows="10" form="formular_1"></textarea>
-            <label for="send"></label>
-            <input form="formular_1" type="submit" value="Absenden" id="send">
-            <label for="stop"></label>
-            <input form="formular_1" type="reset" value="Abbrechen" id="stop">
-        </div>
+        <section class="text-section">
+            <form label="formular_1" id="formular_1">
+            </form>
+            <div class="formular-container">
+                <div class="textarea-container">
+                    <label for="textarea-1"></label>
+                    <textarea name="text" id="textarea-1" class="textarea-1" cols="30" rows="10" form="formular_1"></textarea>
+                </div>
+                <div class="double-input">
+                    <label for="send"></label>
+                    <input form="formular_1" type="submit" value="Absenden" id="send">
+                    <label for="stop"></label>
+                    <input form="formular_1" type="reset" value="Abbrechen" id="stop">
+                </div>
+            </div>
+        </section>
     </body>
 </html>

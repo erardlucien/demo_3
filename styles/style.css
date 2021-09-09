@@ -2,11 +2,15 @@
     margin:0;
     padding:0;
 }
-
+/* ======================
+   for big screen
+   ====================== */
 body {
     margin: auto;
 }
-
+/* ======================
+   navbar and his elements
+   ====================== */
 nav.navbar {
     display: flex;
     justify-content: space-between;
@@ -14,44 +18,61 @@ nav.navbar {
     padding: 15px;
 }
 
-nav.navbar p{
+nav.navbar p.logo{
     display:flex;
     padding: 10px;
 }
 
-nav.navbar p:hover {
+nav.navbar p.logo:hover {
     width: 50px;
     transform: rotate(360deg);
     transition: 0.9s;
 }
 
-nav.navbar ul {
+div.menu {
     display: flex;
-    justify-content: space-between;
+}
+
+input#close-input {
+    display: none;
+}
+
+div.label-close-container {
+    display: none;
+    padding: 10px;
+    flex-direction: column;
+}
+
+ul.navbar-links {
+    display: flex;
     list-style: none;
 }
 
-nav.navbar ul li a {
+a.navbar-link {
     display: flex;
     color: white;
     padding: 10px;
     text-decoration: none;
 }
 
-nav.navbar ul li a:hover {
+a.navbar-link:hover {
     text-decoration: underline red;
     transform: rotate(25deg);
     transition: 0.4s;
     background-color:blue;
 }
 
-form {
-    position: absolute;
-    margin: -25em 0 0 0;
+/* ======================
+   text-section and his elements 
+   ====================== */
+
+.text-section {
+    margin: 50px 0 0 0;
+    display: flex;
+    justify-content: center;
 }
 
-div.double-input {
-    margin: 150px auto;
+.formular-container {   
     padding: 15px;
     width: 320px;
     height: 245px;
@@ -59,17 +80,18 @@ div.double-input {
     background-color:aliceblue;
 }
 
-div.double-input textarea {
-    font-size: 16px;
+div.double-input {
+    display: flex;
+    justify-content: center;
 }
 
 #send,
 #stop {
-    margin: 15px 23px 15px 0;
-    padding: 14px 30px;
+    padding: 15px;
     border: 0;
 }
 #send {
+    margin: 0 15px 0 0;
     background-color: green;
 }
 
@@ -82,39 +104,101 @@ div.double-input textarea {
     background-color: orange;
     border: 0;
 }
-
+/* ======================
+   for small screen
+   ====================== */
 @media only screen and (max-width: 768px) {
 
-    nav.navbar {
-        display: block;
-        padding:0;
+    nav.navbar,
+    div.menu,
+    ul.navbar-links,
+    a.navbar-link {
+        flex-direction: column;
+    }
+/* ======================
+   for navbar-elements
+   ====================== */
+    div.label-close-container {
+        display: flex;
     }
 
-    nav.navbar ul {
-        display: block;
-        padding: 15px;
+    ul.navbar-links {
+        display:none;
+    }
+    
+    label.label-close-input:first-child{
+        display: flex;
+        margin: 0 0 5px 0;
+        height: 2px;
+        width: 25px;
+        background-color: white;
     }
 
-    nav.navbar ul li a {
-        padding: 15px;
-        width: 70px;
+    label.label-close-input:nth-child(2){
+        display: flex;
+        margin: 0 0 5px 0;
+        height: 2px;
+        width: 16px;
+        background-color: white;
     }
 
-    nav.navbar ul li a:hover {
+    label.label-close-input:last-child{
+        display: flex;
+        margin: 0 0 5px 0;
+        height: 2px;
+        width: 10px;
+        background-color: white;
+    }
+    
+    div.label-close-container:hover label.label-close-input:first-child,
+    div.label-close-container:hover label.label-close-input:last-child {
+        width: 16px;
+        transition: 0.9s;
+    }
+
+    input.close-input:checked + div.label-close-container .first {
+        transform: rotate(405deg) translate(5px, 5px);
+        width: 16px;
+        transition: 0.9s;
+    }
+    
+    input.close-input:checked + div.label-close-container .second {
+        opacity: 0;
+        transition: 0.9s;
+    }
+    
+    input.close-input:checked + div.label-close-container .third {
+        transform: rotate(-405deg) translate(5px, -5px);
+        width: 16px;
+        transition: 0.4s;
+    }
+    
+    input.close-input {
+        display: none;
+    }
+    
+    input.close-input:checked + div.label-close-container + ul.navbar-links{
+        display: flex;
+    }
+
+    a.navbar-link {
+        width: 80px;
+    }
+    a.navbar-link:hover {
         transform: rotate(-360deg);
     }
 
-    div.double-input textarea {
+/* ======================
+   for text-section-elements
+   ====================== */
+
+    div.textarea-container .textarea-1 {
         font-size: 16px;
-        width: 220px;
     }
-
-    div.double-input {
-        width: 240px;
-    }
-
+    
     #send,
     #stop {
         padding: 5px;
     }
+
 }
