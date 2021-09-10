@@ -5,13 +5,16 @@
 /* ======================
    for big screen
    ====================== */
-
+ 
 /* ======================
    navbar and his elements
    ====================== */
 nav.navbar {
     display: flex;
     justify-content: space-between;
+    position: fixed;
+    top: 0;
+    width: 100%;
     background-color: aquamarine;
     padding: 15px;
 }
@@ -42,11 +45,12 @@ div.label-close-container {
 
 ul.navbar-links {
     display: flex;
+    padding: 0 20px 0 0;
     list-style: none;
 }
 
 a.navbar-link {
-    display: block;
+    display: flex;
     color: white;
     padding: 10px;
     text-decoration: none;
@@ -57,6 +61,38 @@ a.navbar-link:hover {
     transform: rotate(25deg);
     transition: 0.4s;
     background-color:blue;
+}
+
+/* ======================
+   go-to-top-wrapper and his elements
+   ====================== */
+
+.go-to-top-wrapper {
+    position: fixed;
+    top: 20em;
+    left: 80%;
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    border: 1px solid gray;
+    height: 40px;
+    width: 40px;
+    border-radius: 20px;    
+}
+
+.go-to-top {
+    display: none;
+    text-decoration: none;
+    font-size: 30px;
+    color: white;
+}
+
+.go-to-top-wrapper:hover {
+    background-color: gray;
+}
+
+.go-to-top-wrapper:hover .go-to-top {
+    display:flex;
 }
 
 /* ======================
@@ -78,8 +114,9 @@ a.navbar-link:hover {
    }
 
    .service:hover .service-menu{
-       display: block;
-       position:absolute;
+       display: flex;
+       flex-direction: column;
+       position: absolute;
    }
 
    .service-link:hover {
@@ -92,12 +129,23 @@ a.navbar-link:hover {
    ====================== */
 
 .text-section {
-    margin: 50px 0 0 0;
+    margin: 90px 0 0 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* ======================
+   formular-section and his elements 
+   ====================== */
+
+.formular-section {
+    margin: 15px 0 0 0;
     display: flex;
     justify-content: center;
 }
 
-.formular-container {   
+.formular-container {  
     padding: 15px;
     width: 320px;
     height: 245px;
@@ -129,6 +177,15 @@ div.double-input {
     background-color: orange;
     border: 0;
 }
+
+/* ======================
+   footer and his elements
+   ====================== */
+.footer-body {
+    display: flex;
+    justify-content: center;
+}
+
 /* ======================
    for small screen
    ====================== */
@@ -221,8 +278,24 @@ div.double-input {
     }
 
 /* ======================
-   for text-section-elements
+   text-section and his elements 
    ====================== */
+
+   .text-section {
+    margin: 145px 0 0 0;
+   }
+
+   .go-to-top-wrapper {
+       margin: 90px 0 0 0;
+   }
+
+/* ======================
+   for formular-section-elements
+   ====================== */
+
+   .formular-container {
+       margin: 10px 0 0 0;
+   }
 
     div.textarea-container .textarea-1 {
         font-size: 16px;
@@ -239,7 +312,7 @@ div.double-input {
 
    .service:hover .service-menu{
     display: block;
-    position: relative;
+    position: static;
     width: 90px;
    }
 
