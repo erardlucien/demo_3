@@ -5,9 +5,7 @@
 /* ======================
    for big screen
    ====================== */
-body {
-    margin: auto;
-}
+
 /* ======================
    navbar and his elements
    ====================== */
@@ -24,8 +22,7 @@ nav.navbar p.logo{
 }
 
 nav.navbar p.logo:hover {
-    width: 50px;
-    transform: rotate(360deg);
+    transform: rotate(360deg) translate(3px, 3px);
     transition: 0.9s;
 }
 
@@ -49,7 +46,7 @@ ul.navbar-links {
 }
 
 a.navbar-link {
-    display: flex;
+    display: block;
     color: white;
     padding: 10px;
     text-decoration: none;
@@ -61,6 +58,34 @@ a.navbar-link:hover {
     transition: 0.4s;
     background-color:blue;
 }
+
+/* ======================
+   service and his elements 
+   ====================== */
+
+   .service-menu {
+       display: none;
+       list-style: none;
+       padding: 0;
+       background-color: aquamarine;
+   }
+
+   .service-link {
+       text-decoration: none;
+       color: white;
+       padding: 10px;
+       display: block;
+   }
+
+   .service:hover .service-menu{
+       display: block;
+       position:absolute;
+   }
+
+   .service-link:hover {
+       background-color: blue;
+       text-decoration: 2px underline red;
+   }
 
 /* ======================
    text-section and his elements 
@@ -118,6 +143,13 @@ div.double-input {
 /* ======================
    for navbar-elements
    ====================== */
+
+   nav.navbar p.logo:hover {
+    transform: rotate(360deg);
+    width: 90px;
+    transition: 0.9s;
+   }
+
     div.label-close-container {
         display: flex;
     }
@@ -200,5 +232,15 @@ div.double-input {
     #stop {
         padding: 5px;
     }
+
+/* ======================
+   service and his elements 
+   ====================== */
+
+   .service:hover .service-menu{
+    display: block;
+    position: relative;
+    width: 90px;
+   }
 
 }
