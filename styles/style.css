@@ -126,7 +126,7 @@ a.navbar-link:hover {
    ====================== */
 
 .text-section {
-    margin: 90px 0 0 0;
+    margin: 10px 0 0 0;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -279,7 +279,7 @@ div.double-input {
    ====================== */
 
    .text-section {
-    margin: 145px 0 0 0;
+    margin: 15px 0 0 0;
    }
 
    .go-to-top-wrapper {
