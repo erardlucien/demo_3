@@ -16,12 +16,12 @@ nav.navbar {
     padding: 15px;
 }
 
-nav.navbar p.logo{
+p.logo{
     display:flex;
-    padding: 10px;
+    padding: 15px;
 }
 
-nav.navbar p.logo:hover {
+p.logo:hover {
     transform: rotate(360deg) translate(3px, 3px);
     transition: 0.9s;
 }
@@ -68,7 +68,7 @@ a.navbar-link:hover {
     position: fixed;
     top: 20em;
     left: 80%;
-    background-color: transparent;
+    background-color: gray;
     display: flex;
     justify-content: center;
     border: 1px solid gray;
@@ -78,18 +78,9 @@ a.navbar-link:hover {
 }
 
 .go-to-top {
-    display: none;
     text-decoration: none;
     font-size: 30px;
     color: white;
-}
-
-.go-to-top-wrapper:hover {
-    background-color: gray;
-}
-
-.go-to-top-wrapper:hover .go-to-top {
-    display:flex;
 }
 
 /* ======================
@@ -194,6 +185,7 @@ div.double-input {
     a.navbar-link {
         flex-direction: column;
     }
+
 /* ======================
    for navbar-elements
    ====================== */
@@ -202,7 +194,7 @@ div.double-input {
     transform: rotate(360deg);
     width: 90px;
     transition: 0.9s;
-   }
+    }
 
     div.label-close-container {
         display: flex;
@@ -263,8 +255,9 @@ div.double-input {
         display: none;
     }
     
-    input.close-input:checked + div.label-close-container + ul.navbar-links{
+    input.close-input:checked + div.label-close-container + .navbar-links{
         display: flex;
+        margin: 15px 0 0 0;
     }
 
     a.navbar-link {
@@ -281,6 +274,10 @@ div.double-input {
    .text-section {
     margin: 15px 0 0 0;
    }
+
+/* ======================
+   go-to-wrapper and his elements 
+   ====================== */
 
    .go-to-top-wrapper {
        margin: 90px 0 0 0;
