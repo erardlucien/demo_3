@@ -2,6 +2,11 @@
     margin:0;
     padding:0;
 }
+
+:focus {
+    outline: 1px solid blue;
+}
+
 /* ======================
    for big screen
    ====================== */
@@ -24,10 +29,6 @@ p.logo{
 p.logo:hover {
     transform: rotate(360deg) translate(3px, 3px);
     transition: 0.9s;
-}
-
-div.menu {
-    display: flex;
 }
 
 input#close-input {
@@ -160,6 +161,13 @@ div.double-input {
     background-color: red;
 }
 
+
+#send:focus,
+#stop:focus {
+    outline: none;
+    text-decoration:  2px underline  blue;
+}
+
 #send:hover,
 #stop:hover {
     background-color: orange;
@@ -190,6 +198,11 @@ div.double-input {
    for navbar-elements
    ====================== */
 
+   .logo-and-label {
+       display: flex;
+       justify-content: space-between;
+   }
+
    nav.navbar p.logo:hover {
     transform: rotate(360deg);
     width: 90px;
@@ -198,6 +211,7 @@ div.double-input {
 
     div.label-close-container {
         display: flex;
+        margin: 5px 0 0 0;
     }
 
     ul.navbar-links {
@@ -234,18 +248,18 @@ div.double-input {
         transition: 0.9s;
     }
 
-    input.close-input:checked + div.label-close-container .first {
+    input.close-input:checked + .logo-and-label > div.label-close-container .first {
         transform: rotate(405deg) translate(5px, 5px);
         width: 16px;
         transition: 0.9s;
     }
     
-    input.close-input:checked + div.label-close-container .second {
+    input.close-input:checked + .logo-and-label > div.label-close-container .second {
         opacity: 0;
         transition: 0.9s;
     }
     
-    input.close-input:checked + div.label-close-container .third {
+    input.close-input:checked + .logo-and-label > div.label-close-container .third {
         transform: rotate(-405deg) translate(5px, -5px);
         width: 16px;
         transition: 0.4s;
@@ -255,7 +269,7 @@ div.double-input {
         display: none;
     }
     
-    input.close-input:checked + div.label-close-container + .navbar-links{
+    input.close-input:checked + .logo-and-label + .navbar-links{
         display: flex;
         margin: 15px 0 0 0;
     }
