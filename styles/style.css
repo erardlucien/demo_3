@@ -113,6 +113,11 @@ a.navbar-link:hover {
        text-decoration: 2px underline red;
    }
 
+   .service:hover .navbar-link {
+       position: relative;
+       z-index: 1;
+   }
+
 /* ======================
    text-section and his elements 
    ====================== */
